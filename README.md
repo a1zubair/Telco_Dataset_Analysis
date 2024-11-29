@@ -33,7 +33,7 @@ a. The skewness of tenure (0.24) and Monthly Charges (-0.22) indicates that thes
 ## 4. Bivariate Analysis
 4.1 Analysis of Categorical Features
 
-![Analysis](newplot (1).png)
+![Analysis of Categorical Features](newplot (1).png)
 
 Key Points:
 

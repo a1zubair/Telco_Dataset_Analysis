@@ -30,7 +30,18 @@ Key Points :
 
 a. The skewness of tenure (0.24) and Monthly Charges (-0.22) indicates that these features are well-distributed. However, Total Charges exhibits a positive skew, which is suboptimal for machine learning algorithms. To address this issue, a logarithmic transformation was applied to Total Charges, effectively reducing the skewness to -0.74, thereby improving the data distribution for modeling purposes.
 
-## Bivariate Analysis
+## 4. Bivariate Analysis
+4.1 Analysis of Categorical Features
+
+![Analysis](newplot (1).png)
+
+Key Points:
+
+a. Customers with two-year contracts have significantly lower churn rates compared to those with month-to-month contracts.
+
+b. Customers using Fiber Optic internet service exhibit higher churn rates than those using DSL, possibly indicating dissatisfaction with the Fiber Optic service.
+
+
 
 
 

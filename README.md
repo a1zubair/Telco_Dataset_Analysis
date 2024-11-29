@@ -24,7 +24,11 @@ The Telco dataset, taken from Kaggle comprises 7,043 customer records from a tel
 
 3.2 Analysis of the Numerical Features
 
-![Analysis of the Numerical Features](Analysis.png)
+![Analysis of the Numerical Features](visualization.png)
+
+Key Points :
+
+a. The skewness of tenure (0.24) and Monthly Charges (-0.22) indicates that these features are well-distributed. However, Total Charges exhibits a positive skew, which is suboptimal for machine learning algorithms. To address this issue, a logarithmic transformation was applied to Total Charges, effectively reducing the skewness to -0.75, thereby improving the data distribution for modeling purposes.
 
 
 

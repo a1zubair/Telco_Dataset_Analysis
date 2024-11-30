@@ -10,7 +10,7 @@ The Telco dataset, taken from Kaggle comprises 7,043 customer records from a tel
 
 ## 3. Univariate Analysis
 
-3.1 Analysis of the Categorical Features
+### 3.1 Analysis of the Categorical Features
 
   ![Analysis of the Categorical Features](newplot.png)
 
@@ -22,7 +22,7 @@ The Telco dataset, taken from Kaggle comprises 7,043 customer records from a tel
 
   c. The subcategories of Internet Service, such as 'OnlineSecurity,' 'OnlineBackup,' 'DeviceProtection,' 'TechSupport,' 'StreamingTV,' and 'StreamingMovies,' each have three unique values: 'Yes,' 'No,' and 'No Internet Service.' The percentage of 'No Internet Service' closely aligns with the percentage of 'No' in the Internet Service category, indicating that 'No' and 'No Internet Service' effectively convey the same information.
 
-3.2 Analysis of the Numerical Features
+### 3.2 Analysis of the Numerical Features
 
 ![Analysis of the Numerical Features](Log_Transformation.png)
 
@@ -31,7 +31,7 @@ Key Points :
 a. The skewness of tenure (0.24) and Monthly Charges (-0.22) indicates that these features are well-distributed. However, Total Charges exhibits a positive skew, which is suboptimal for machine learning algorithms. To address this issue, a logarithmic transformation was applied to Total Charges, effectively reducing the skewness to -0.74, thereby improving the data distribution for modeling purposes.
 
 ## 4. Bivariate Analysis
-4.1 Analysis of Categorical Features
+### 4.1 Analysis of Categorical Features
 
 ![Analysis of Categorical Features](bivariate.png)
 
@@ -41,7 +41,21 @@ a. Customers with two-year contracts have significantly lower churn rates compar
 
 b. Customers using Fiber Optic internet service exhibit higher churn rates than those using DSL, possibly indicating dissatisfaction with the Fiber Optic service.
 
-4.1 Analysis of Numerical Features
+### 4.1 Analysis of Numerical Features
+
+By analyzing the KDE graphs, we observe the following trends:
+
+  a. Tenure and Churn:
+
+   - Customers with shorter tenures exhibit higher churn rates, indicating a correlation between limited time with the company and an increased likelihood of discontinuing the service.
+   - Conversely, as tenure increases, customer retention improves significantly, suggesting that long-standing customers are more loyal to the company.
+
+  b. Monthly Charges and Churn:
+
+   - Lower monthly charges are associated with reduced churn rates, implying that affordability plays a crucial role in customer retention.
+   - However, as monthly charges increase, the churn rate also rises, indicating that higher costs may be a significant factor driving customers to discontinue the service.
+
+
 
 
 

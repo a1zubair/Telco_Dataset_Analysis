@@ -91,8 +91,21 @@ StandardScaler applied to numerical features (tenure, MonthlyCharges, TotalCharg
 
 ### 5.3 Correlation Heatmap 
 
+![Correlation Heatmap](correlation_heatmap.png)
 
+Key Points:
 
+  a. Strong Postive Correlations
+  
+   - TotalCharges_log and MonthlyCharges: Correlation of 0.83 suggests high dependency.
+     
+   - InternetService_Fiber optic and MonthlyCharges: Correlation of 0.79 indicates customers with fiber optics tend to have higher charges.
+
+  b.  Strong Negative Correlations:
+
+   - Strong positive correlation with Contract_Month-to-month (0.35): Month-to-month contracts are more likely to churn.
+
+   - Negative correlation with Contract_Two year (-0.29): Customers on two-year contracts are less likely to churn.
 
 
 

@@ -89,6 +89,10 @@ The dataset contained both categorical and binary features that required encodin
 ### 5.3 Standardization
 StandardScaler applied to numerical features (tenure, MonthlyCharges, TotalCharges_log).
 
+### 5.3 Correlation Heatmap 
+
+
+
 
 
 

@@ -113,6 +113,13 @@ Key Points:
 
 ### 5.3 Handling Imbalanced Dataset
 
+![Imbalance](SMOTE.png)
+
+Applied SMOTE (Synthetic Minority Oversampling Technique) to overcome the imbalance dataset. This technique addresses class imbalance by generating synthetic samples for the minority class (Churn = 1), ensuring the dataset has a more balanced distribution of classes, which helps improve model performance and generalization for predicting churn as shown by the image below.
+
+
+
+
 
 
 

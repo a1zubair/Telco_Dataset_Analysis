@@ -26,7 +26,7 @@ The Telco dataset, taken from Kaggle comprises 7,043 customer records from a tel
 
 ### 3.2 Analysis of the Numerical Features
 
-![Analysis of the Numerical Features](Log_Transformation.png)
+![Analysis of the Numerical Features](boxplot.png)
 
 Key Points :
 

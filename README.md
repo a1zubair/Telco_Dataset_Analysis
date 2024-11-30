@@ -33,13 +33,17 @@ a. The skewness of tenure (0.24) and Monthly Charges (-0.22) indicates that thes
 ## 4. Bivariate Analysis
 4.1 Analysis of Categorical Features
 
-![Analysis of Categorical Features](newplot (1).png)
+![Analysis of Categorical Features](bivariate.png)
 
 Key Points:
 
 a. Customers with two-year contracts have significantly lower churn rates compared to those with month-to-month contracts.
 
 b. Customers using Fiber Optic internet service exhibit higher churn rates than those using DSL, possibly indicating dissatisfaction with the Fiber Optic service.
+
+4.1 Analysis of Numerical Features
+
+
 
 
 

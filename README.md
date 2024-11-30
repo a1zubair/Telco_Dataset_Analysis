@@ -73,10 +73,10 @@ To streamline the dataset and simplify feature analysis, the following adjustmen
   a. Variables with Yes, No, and No Internet:
    - For features like OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, and StreamingMovies, the value No Internet was replaced with No. This adjustment ensured consistency in categorical responses and reduced unnecessary complexity.
 
-  b.Phone Service Variable:
+  b. Phone Service Variable:
    - For the PhoneService feature, the value No Phone Service was replaced with No. Similarly, in the MultipleLines feature, No Phone Service was also standardized to No.
 
-  c.Payment Method Variable:
+  c. Payment Method Variable:
    - The PaymentMethod feature initially contained four categories: 'Electronic check', 'Mailed check', 'Bank transfer (automatic)', and 'Credit card (automatic)'. During preprocessing, this feature was simplified into three categories: 'automatic', 'mailed check', and 'electronic'. The 'automatic' category combines 'Bank transfer (automatic)' and 'Credit card (automatic)', as these represent similar automated payment methods. The 'Electronic check' category was retained separately due to its notably high churn rate, making it critical for deeper analysis to understand its impact on customer behavior.
      
 ### 5.3 Encoding
@@ -97,7 +97,7 @@ Key Points:
 
   a. Strong Postive Correlations
   
-   - TotalCharges_log and MonthlyCharges: Correlation of 0.83 suggests high dependency.
+   - TotalCharges_log and tenure: Correlation of 0.83 suggests high dependency.
      
    - InternetService_Fiber optic and MonthlyCharges: Correlation of 0.79 indicates customers with fiber optics tend to have higher charges.
 
@@ -106,6 +106,10 @@ Key Points:
    - Strong positive correlation with Contract_Month-to-month (0.35): Month-to-month contracts are more likely to churn.
 
    - Negative correlation with Contract_Two year (-0.29): Customers on two-year contracts are less likely to churn.
+
+   c. Multicolinearity :
+
+  - There is a strong correlation between TotalCharges_log and tenure. Therefore, the tenure variable was removed from the dataset to ensure more accurate results in the logistic regression analysis.
 
 
 

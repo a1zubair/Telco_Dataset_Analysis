@@ -111,6 +111,7 @@ Key Points:
 
   - There is a strong correlation between TotalCharges_log and tenure. Therefore, the tenure variable was removed from the dataset to ensure more accurate results in the logistic regression analysis.
 
+### 5.3 Handling Imbalanced Dataset
 
 
 

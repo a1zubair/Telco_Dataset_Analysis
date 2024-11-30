@@ -12,15 +12,17 @@ The Telco dataset, taken from Kaggle comprises 7,043 customer records from a tel
 
 ### 3.1 Analysis of the Categorical Features
 
-  ![Analysis of the Categorical Features](newplot.png)
+  ![Analysis of the Categorical Features](Churn.png)
 
   Key Points of the Image Above:
 
-  a. InternetService: 56% of customers use fiber-optic services, 34% DSL, and 10% no internet service.
+  a. The Churn variable is highly imbalanced
 
-  b. Contract: 55% of customers are on month-to-month contracts, while 19% and 26% are on one- and two-year contracts, respectively.
+  b. InternetService: 56% of customers use fiber-optic services, 34% DSL, and 10% no internet service.
 
-  c. The subcategories of Internet Service, such as 'OnlineSecurity,' 'OnlineBackup,' 'DeviceProtection,' 'TechSupport,' 'StreamingTV,' and 'StreamingMovies,' each have three unique values: 'Yes,' 'No,' and 'No Internet Service.' The percentage of 'No Internet Service' closely aligns with the percentage of 'No' in the Internet Service category, indicating that 'No' and 'No Internet Service' effectively convey the same information.
+  c. Contract: 55% of customers are on month-to-month contracts, while 19% and 26% are on one- and two-year contracts, respectively.
+
+  d. The subcategories of Internet Service, such as 'OnlineSecurity,' 'OnlineBackup,' 'DeviceProtection,' 'TechSupport,' 'StreamingTV,' and 'StreamingMovies,' each have three unique values: 'Yes,' 'No,' and 'No Internet Service.' The percentage of 'No Internet Service' closely aligns with the percentage of 'No' in the Internet Service category, indicating that 'No' and 'No Internet Service' effectively convey the same information.
 
 ### 3.2 Analysis of the Numerical Features
 
@@ -55,7 +57,37 @@ By analyzing the KDE graphs, we observe the following trends:
    - Lower monthly charges are associated with reduced churn rates, implying that affordability plays a crucial role in customer retention.
    - However, as monthly charges increase, the churn rate also rises, indicating that higher costs may be a significant factor driving customers to discontinue the service.
 
+## 5. Data Preprocessing
+### 5.1 Analysis of Missing Values and Outliers
+The dataset was rigorously examined for missing values and outliers to ensure data quality and integrity.
 
+  a. Missing Values:
+   - A thorough check confirmed that the dataset contained no missing values, eliminating the need for imputation or data cleaning in this aspect.
+
+  b. Outliers:
+   - Boxplots were created for numerical features, including tenure, MonthlyCharges, and TotalCharges. While some mild outliers were observed, they were not significant enough to warrant removal or adjustment, as they represented valid variations in customer behavior rather than data anomalies. These outliers were retained to preserve the dataset's integrity and to ensure a realistic model.
+
+### 5.2 Feature Engineering
+To streamline the dataset and simplify feature analysis, the following adjustments were made to categorical variables with specific unique values:
+
+  a. Variables with Yes, No, and No Internet:
+   - For features like OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, and StreamingMovies, the value No Internet was replaced with No. This adjustment ensured consistency in categorical responses and reduced unnecessary complexity.
+
+  b.Phone Service Variable:
+   - For the PhoneService feature, the value No Phone Service was replaced with No. Similarly, in the MultipleLines feature, No Phone Service was also standardized to No.
+
+  c.Payment Method Variable:
+   - The PaymentMethod feature initially contained four categories: 'Electronic check', 'Mailed check', 'Bank transfer (automatic)', and 'Credit card (automatic)'. During preprocessing, this feature was simplified into three categories: 'automatic', 'mailed check', and 'electronic'. The 'automatic' category combines 'Bank transfer (automatic)' and 'Credit card (automatic)', as these represent similar automated payment methods. The 'Electronic check' category was retained separately due to its notably high churn rate, making it critical for deeper analysis to understand its impact on customer behavior.
+     
+### 5.3 Encoding
+The dataset contained both categorical and binary features that required encoding to prepare the data for machine learning algorithms. The following steps were applied:
+
+  a. One-hot-encoding was applied to Contract, Payment Method and Internet Services
+  
+  b. Binary Encoding was applied to the rest of the features to turn No into 0 and Yes into 1
+
+### 5.3 Standardization
+StandardScaler applied to numerical features (tenure, MonthlyCharges, TotalCharges_log).
 
 
 

@@ -170,6 +170,12 @@ Key Features:
 
    - Customers using electronic checks are more likely to churn, possibly due to perceived inconvenience compared to automatic payments.
 
+### 6. Conclusion
+
+The Telco dataset analysis effectively identified key drivers of customer churn and established predictive models to assist in proactive retention strategies. By addressing class imbalance through SMOTE, model performance improved significantly, particularly in terms of recall and F1-Scores for the minority class (churned customers). Among the models, Random Forest emerged as the best performer, achieving the highest accuracy (84%), recall (86%), and AUC (91%) with SMOTE, making it ideal for churn detection. Logistic Regression provided consistent performance and interpretability, serving as a reliable alternative. Key features influencing churn included high total and monthly charges, short-term contracts, and a lack of value-added services like online security. Insights from this analysis enable telecommunication companies to design targeted interventions, optimize pricing strategies, and enhance customer retention efforts.
+
+### 6. Future Work
+To enhance the predictive power of the churn models, additional features such as customer feedback, service outage history, and customer support interactions can be incorporated to capture deeper behavioral insights. Analyzing external factors like competitor pricing and market conditions can further improve the model's accuracy by contextualizing customer decisions. Advanced modeling techniques, including testing ensemble methods like XGBoost and Gradient Boosting, can potentially yield better performance. Additionally, implementing hyperparameter tuning for Random Forest and Logistic Regression will optimize their performance, ensuring more precise and actionable predictions.
 
 
 

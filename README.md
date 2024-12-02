@@ -43,7 +43,7 @@ a. Customers with two-year contracts have significantly lower churn rates compar
 
 b. Customers using Fiber Optic internet service exhibit higher churn rates than those using DSL, possibly indicating dissatisfaction with the Fiber Optic service.
 
-### 4.1 Analysis of Numerical Features
+### 4.2 Analysis of Numerical Features
 
 By analyzing the KDE graphs, we observe the following trends:
 
@@ -86,10 +86,10 @@ The dataset contained both categorical and binary features that required encodin
   
   b. Binary Encoding was applied to the rest of the features to turn No into 0 and Yes into 1
 
-### 5.3 Standardization
+### 5.4 Standardization
 StandardScaler applied to numerical features (tenure, MonthlyCharges, TotalCharges_log).
 
-### 5.3 Correlation Heatmap 
+### 5.5 Correlation Heatmap 
 
 ![Correlation Heatmap](correlation_heatmap.png)
 
@@ -111,35 +111,35 @@ Key Points:
 
   - There is a strong correlation between TotalCharges_log and tenure. Therefore, the tenure variable was removed from the dataset to ensure more accurate results in the logistic regression analysis.
 
-### 5.3 Handling Imbalanced Dataset
+### 5.6 Handling Imbalanced Dataset
 
 ![Imbalance](DATA_IMBALANCE.png)
 
 Applied SMOTE (Synthetic Minority Oversampling Technique) to overcome the imbalance dataset. This technique addresses class imbalance by generating synthetic samples for the minority class (Churn = 1), ensuring the dataset has a more balanced distribution of classes, which helps improve model performance and generalization for predicting churn as shown by the image below.
 
 
-## 5. Model Predictions and Significant Features
+## 6. Model Predictions and Significant Features
 
-### 5.1 Model Description
+### 6.1 Model Description
 
 Trained five machine learning models—Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and AdaBoost—using an 80-20 train-test split. Each model was evaluated in two scenarios: with the original imbalanced dataset and with SMOTE-applied data to balance classes. This aimed to assess the impact of balancing on accuracy, recall, precision (for the minority class), F1-Score, and AUC. 
 
-### 5.1 Results without applying SMOTE
+### 6.2 Results without applying SMOTE
 
 ![Imbalance](No_SMOTE.png)
 
 
-### 5.2 Results after applying SMOTE
+### 6.3 Results after applying SMOTE
 
 ![Imbalance](SMOTE.png)
 
 
-### 5.2 Results
+### 6.4 Results
 
 SMOTE proved highly effective in improving minority class recall and F1-Scores across all models by addressing class imbalance, with the most significant improvements observed in Random Forest and Logistic Regression. Random Forest emerged as the best performer with SMOTE, achieving the highest accuracy (84%), recall (86%), and AUC (91%), while Logistic Regression demonstrated consistent performance, making it suitable for scenarios requiring interpretability. Naive Bayes showed minimal improvement due to its simplicity and feature independence assumptions. While SMOTE enhanced recall and F1-Scores, it slightly reduced precision for the majority class (Churn = 0), leading to more false positives—a trade-off that may be acceptable to minimize missed churn cases. Improved recall facilitates identifying more at-risk customers, making Random Forest with SMOTE ideal for churn detection, while Logistic Regression offers a balanced alternative.
 
 
-### 5.3 Significant Features
+### 6.5 Significant Features
 
 
 ![Important Features](Important_features.png)
@@ -170,11 +170,11 @@ Key Features:
 
    - Customers using electronic checks are more likely to churn, possibly due to perceived inconvenience compared to automatic payments.
 
-### 6. Conclusion
+### 7. Conclusion
 
 The Telco dataset analysis effectively identified key drivers of customer churn and established predictive models to assist in proactive retention strategies. By addressing class imbalance through SMOTE, model performance improved significantly, particularly in terms of recall and F1-Scores for the minority class (churned customers). Among the models, Random Forest emerged as the best performer, achieving the highest accuracy (84%), recall (86%), and AUC (91%) with SMOTE, making it ideal for churn detection. Logistic Regression provided consistent performance and interpretability, serving as a reliable alternative. Key features influencing churn included high total and monthly charges, short-term contracts, and a lack of value-added services like online security. Insights from this analysis enable telecommunication companies to design targeted interventions, optimize pricing strategies, and enhance customer retention efforts.
 
-### 6. Future Work
+### 8. Future Work
 To enhance the predictive power of the churn models, additional features such as customer feedback, service outage history, and customer support interactions can be incorporated to capture deeper behavioral insights. Analyzing external factors like competitor pricing and market conditions can further improve the model's accuracy by contextualizing customer decisions. Advanced modeling techniques, including testing ensemble methods like XGBoost and Gradient Boosting, can potentially yield better performance. Additionally, implementing hyperparameter tuning for Random Forest and Logistic Regression will optimize their performance, ensuring more precise and actionable predictions.
 
 

@@ -122,7 +122,11 @@ Applied SMOTE (Synthetic Minority Oversampling Technique) to overcome the imbala
 
 ### 5.1 Model Description
 
-Trained five machine learning models—Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and AdaBoost—using an 80-20 train-test split. Each model was evaluated in two scenarios: with the original imbalanced dataset and with SMOTE-applied data to balance classes. This aimed to assess the impact of balancing on accuracy, recall, precision (for the minority class), F1-Score, and AUC.
+Trained five machine learning models—Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and AdaBoost—using an 80-20 train-test split. Each model was evaluated in two scenarios: with the original imbalanced dataset and with SMOTE-applied data to balance classes. This aimed to assess the impact of balancing on accuracy, recall, precision (for the minority class), F1-Score, and AUC. 
+
+
+![Imbalance](Results.png)
+
 
 
 

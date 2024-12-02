@@ -142,11 +142,33 @@ SMOTE proved highly effective in improving minority class recall and F1-Scores a
 ### 5.3 Significant Features
 
 
+![Important Features](Important_features.png)
 
+Key Features:
 
+  a. TotalCharges_log:
+  
+   - Customers with higher cumulative charges are strongly correlated with churn, possibly indicating dissatisfaction due to billing inconsistencies or high total costs.
 
+  b.  MonthlyCharges:
 
+   - Higher monthly charges increase churn risk, suggesting pricing sensitivity among customers.
 
+  c. Contract_Month-to-month:
+  
+   - Month-to-month customers are at a significantly higher risk of churn due to lack of commitment or flexibility to leave at any time.
+
+  d.  InternetService_Fiber optic:
+
+   - Customers with fiber optic services show higher churn rates, likely due to pricing or unmet service quality expectations.
+
+  e. OnlineSecurity:
+  
+   - Customers without online security are more likely to churn, indicating that value-added services play an important role in customer retention.
+
+  b.  PaymentMethod_Electronic check:
+
+   - Customers using electronic checks are more likely to churn, possibly due to perceived inconvenience compared to automatic payments.
 
 
 

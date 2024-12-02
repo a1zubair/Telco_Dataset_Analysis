@@ -118,7 +118,7 @@ Key Points:
 Applied SMOTE (Synthetic Minority Oversampling Technique) to overcome the imbalance dataset. This technique addresses class imbalance by generating synthetic samples for the minority class (Churn = 1), ensuring the dataset has a more balanced distribution of classes, which helps improve model performance and generalization for predicting churn as shown by the image below.
 
 
-## 5. Model Predictions
+## 5. Model Predictions and Significant Features
 
 ### 5.1 Model Description
 
@@ -129,13 +129,17 @@ Trained five machine learning models—Logistic Regression, Decision Tree, Rando
 ![Imbalance](No_SMOTE.png)
 
 
-### 5.1 Results after applying SMOTE
+### 5.2 Results after applying SMOTE
 
-![Imbalance](No_SMOTE.png)
-
-
+![Imbalance](SMOTE.png)
 
 
+### 5.2 Results
+
+SMOTE proved highly effective in improving minority class recall and F1-Scores across all models by addressing class imbalance, with the most significant improvements observed in Random Forest and Logistic Regression. Random Forest emerged as the best performer with SMOTE, achieving the highest accuracy (84%), recall (86%), and AUC (91%), while Logistic Regression demonstrated consistent performance, making it suitable for scenarios requiring interpretability. Naive Bayes showed minimal improvement due to its simplicity and feature independence assumptions. While SMOTE enhanced recall and F1-Scores, it slightly reduced precision for the majority class (Churn = 0), leading to more false positives—a trade-off that may be acceptable to minimize missed churn cases. Improved recall facilitates identifying more at-risk customers, making Random Forest with SMOTE ideal for churn detection, while Logistic Regression offers a balanced alternative.
+
+
+### 5.2 Significant Features
 
 
 
